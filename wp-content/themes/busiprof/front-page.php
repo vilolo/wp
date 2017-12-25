@@ -17,7 +17,7 @@ $busiprof_theme_options=theme_setup_data();
       function get_banner()
       {
           global $wpdb;
-          return $wpdb->get_results("select * from wp_posts where post_type = 'attachment' and left(post_title, 6) = 'banner' limit 10", ARRAY_A);
+          return $wpdb->get_results("select guid, post_content from wp_posts where post_type = 'attachment' and left(post_title, 6) = 'banner' limit 10", ARRAY_A);
       }
 if($current_options['home_page_slider_enabled']=="on"){
 
