@@ -1,3 +1,4 @@
-*
-!busiprof/
 !.gitignore
+*
+*/
+!busiprof/
