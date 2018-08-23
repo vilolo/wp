@@ -32,14 +32,15 @@ if( $current_options['home_banner_strip_enabled'] == 'on' && $current_options['s
     <div id="focus-banner">
         <ul id="focus-banner-list">
             <?php foreach ($banner_list as $k => $v){?>
-            <a href="<?php echo $v['post_content']; ?>" class="focus-banner-img" target="_blank">
-                <li>
+                <li class="focus-banner-img">
+                    <a href="<?php echo $v['post_content']? $v['post_content'].'" target="_blank" ' :'#"'; ?> >
                     <img src="<?php echo $v['guid'];?>" alt="">
                     <div class="focus-banner-text">
                         <p></p>
                     </div>
+                    </a>
                 </li>
-            </a>
+<!--            </a>-->
             <?php }?>
         </ul>
         <a href="javascript:;" id="next-img" class="focus-handle"></a> <a href="javascript:;" id="prev-img" class="focus-handle"></a>
